@@ -142,3 +142,20 @@ app-top-bar {
     margin-right: 10px;
   }
 }
+
+/* Footer */
+
+app-footer {
+  width: 100%;
+  height: $footerHeight;
+  background-color: #1976d2;
+  padding: 12px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  p {
+    color: white;
+  }
+}
