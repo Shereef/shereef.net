@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "version": 1, 
+  "version": 1,
   "newProjectRoot": "projects",
   "projects": {
     "shereef-net": {
@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "shereef-net"
+    }
+  },
+  "defaultProject": "shereef-net",
+  "cli": {
+    "analytics": "15e82e70-d076-4c2a-a05d-900b8a068f40"
+  }
 }
