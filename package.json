@@ -4,8 +4,9 @@
 	"scripts": {
 		"ng": "npx ng",
 		"start": "npx ng serve -o",
+		"prebuild": "npm run version",
 		"build": "npx ng build --prod",
-		"postbuild":"echo `date` >> /home/shereef.net/public_html/lastbuild.txt",
+		"version": "node scripts/version.js",
 		"test": "npx ng test",
 		"e2e": "npx ng e2e",
 		"lint": "npm run lint:eslint -- --cache && npm run lint:styles && npm run prettierCheck",
