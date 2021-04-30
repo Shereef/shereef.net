@@ -12,14 +12,19 @@ console.log(chalk.green(`Build Env: ${buildEnvironment}`));
 const commitIdLong = execSync('git rev-parse HEAD').toString().trim();
 const commitId = execSync('git rev-parse --short HEAD').toString().trim();
 const commitTime = execSync('git log -1 --format=%cd').toString().trim();
-const commitTimeString = new Date(commitTime).toISOString();
-const deployTime = new Date().toISOString();
+const tzoffset = new Date().getTimezoneOffset() * 60000; //offset in milliseconds
+const commitTimeString = new Date(
+	new Date(commitTime).getTime() - tzoffset
+).toISOString();
+const deployTimeString = new Date(Date.now() - tzoffset)
+	.toISOString()
+	.slice(0, -1);
 const branchName = execSync('git rev-parse --abbrev-ref HEAD')
 	.toString()
 	.trim();
 
 console.log(chalk.yellow(`Branch name: '${branchName}'`));
-console.log(chalk.yellow(`Deploy Date & Time: '${deployTime}'`));
+console.log(chalk.yellow(`Deploy Date & Time: '${deployTimeString}'`));
 console.log(chalk.yellow(`Commit Hash: '${commitIdLong}'`));
 console.log(chalk.yellow(`Commit Hash Short: '${commitId}'`));
 console.log(chalk.yellow(`Commit Date & Time: '${commitTimeString}'`));
@@ -29,7 +34,7 @@ console.log(chalk.green(`versionTypeScriptPath: ${versionTypeScriptPath}`));
 const tsFileContent =
 	`export class Version{public static commitId='${commitId}';` +
 	`public static commitTimeString='${commitTimeString}';` +
-	`public static deployTimeString='${deployTime}';` +
+	`public static deployTimeString='${deployTimeString}';` +
 	`public static buildEnvironment='${buildEnvironment}';` +
 	`public static branchName='${branchName}';}`;
 
