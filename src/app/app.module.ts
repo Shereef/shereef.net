@@ -8,17 +8,14 @@ import { FooterComponent } from './footer/footer.component';
 import { ComingSoonComponent } from './coming-soon/coming-soon.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    TopBarComponent,
-    FooterComponent,
-    ComingSoonComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+	declarations: [
+		AppComponent,
+		TopBarComponent,
+		FooterComponent,
+		ComingSoonComponent,
+	],
+	imports: [BrowserModule, AppRoutingModule],
+	providers: [],
+	bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
