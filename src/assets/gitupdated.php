@@ -67,7 +67,9 @@ try {
     if (!isset($_POST['payload'])) {
         echo "Works fine.";
     } else {
+        echo "Running.";
         run();
+        echo "Ran.";
     }
 } catch ( Exception $e ) {
     $msg = $e->getMessage();
