@@ -74,4 +74,5 @@ try {
 } catch ( Exception $e ) {
     $msg = $e->getMessage();
     mail($error_mail, $msg, ''.$e);
+    echo $msg;
 }
