@@ -5,6 +5,7 @@
 		"ng": "npx ng",
 		"start": "npx ng serve -o",
 		"build": "npx ng build --prod",
+		"postbuild":"echo `date` >> /home/shereef.net/public_html/lastbuild.txt",
 		"test": "npx ng test",
 		"e2e": "npx ng e2e",
 		"lint": "npm run lint:eslint -- --cache && npm run lint:styles && npm run prettierCheck",
