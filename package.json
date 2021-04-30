@@ -4,7 +4,7 @@
 	"scripts": {
 		"ng": "npx ng",
 		"start": "npx ng serve -o",
-		"build": "npx ng build",
+		"build": "npx ng build --prod",
 		"test": "npx ng test",
 		"e2e": "npx ng e2e",
 		"lint": "npm run lint:eslint -- --cache && npm run lint:styles && npm run prettierCheck",
