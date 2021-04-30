@@ -59,7 +59,8 @@
 									"maximumWarning": "2kb",
 									"maximumError": "4kb"
 								}
-							]
+							],
+							"outputPath": "/home/shereef.net/public_html"
 						}
 					}
 				},
