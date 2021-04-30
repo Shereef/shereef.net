@@ -21,13 +21,9 @@ function run() {
 }
 
 try {
-    if (!isset($_POST['payload'])) {
-        echo "Works fine.";
-    } else {
-        echo "Running.";
-        run();
-        echo "Ran.";
-    }
+    echo "Running.";
+    run();
+    echo "Ran.";
 } catch ( Exception $e ) {
     $msg = $e->getMessage();
     mail($error_mail, $msg, ''.$e);
