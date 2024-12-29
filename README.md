@@ -20,6 +20,12 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
+## About Shereef Marzouk
+
+[Shereef Marzouk](https://www.linkedin.com/in/shereef/) (He/Him) is a Staff Software Engineer at DaySmart with over seven years of experience in full stack development. He is passionate about building innovative and scalable solutions that enhance the productivity and profitability of small businesses. Shereef has contributed to multiple projects using TypeScript, NodeJS, .NET, Angular, and Amazon Cognito.
+
+Shereef is also a certified scrum master and a Microsoft technology associate, who values collaboration, learning, and sharing. He has led and mentored teams of engineers, delivered high-quality software releases, and received awards for his key contributions. Shereef enjoys helping people and sharing his knowledge through online platforms, blogs, and podcasts.
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
