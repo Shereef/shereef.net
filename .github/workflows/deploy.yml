@@ -39,6 +39,11 @@ jobs:
               run: |
                   git config --global user.email "${{ github.event.pusher.email }}"
                   git config --global user.name "${{ github.actor }}"
+            - name: Set up GitHub token
+              env:
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+              run: |
+                  git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}
 
             - name: Deploy to GitHub Pages
               run: npm run deploy
