@@ -1,12 +1,8 @@
-import type { NextConfig } from 'next';
+import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-	distDir: 'out',
-	exportPathMap: async function () {
-		return {
-			'/': { page: '/' },
-		};
-	},
+  /* config options here */
+  distDir: 'out',
 };
 
 export default nextConfig;
